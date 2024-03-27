@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script type="text/javascript" src="index.js" defer></script>
+  <title>Progress</title>
+</head>
+<body>
+  <main class="container">
+    <span class="title">Progress</span>
+    <div class="circular-progress">
+    </div>
+    <div class="settings">
+      <div class="progress-value-monitoring">
+        <div class="progress-value-container">
+        <input type="number" min="0" max="100" class="progress-value" value="0"></input>
+        </div>
+        <span class="switch-description">Value</span>
+      </div>
+      <div class="settings-box">
+        <div class="switch-container">
+          <label class="switch">
+            <input type="checkbox" class="switch-animate" checked="false"/>
+            <span class="slider"></span>
+          </label>
+        </div>
+        <span class="switch-description">Animate</span>
+      </div>
+      <div class="settings-box">
+        <div class="switch-container">
+          <label class="switch">
+            <input type="checkbox" class="switch-hide" checked="false"/>
+            <span class="slider"></span>
+          </label>
+        </div>
+        <span class="switch-description">Hide</span>
+      </div>
+  </main>
+</body>
+</html>
