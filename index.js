@@ -7,18 +7,13 @@ progressValue.value = 0
 switchAnimate.checked = false;
 switchHide.checked = false;
 
-let currentProgressValue = 0;
-let progressEndValue = 100;
 let speed = 10;
 let interval;
+let deg = 0
+
 const animateCircle = () => {
     interval = setInterval(() => {
-    currentProgressValue++;
-    progressValue.value = `${currentProgressValue}`
-    circularProgress.style.background = `conic-gradient(#005cff ${currentProgressValue * 3.6}deg, whitesmoke 0deg)`
-    if (currentProgressValue == progressEndValue) {
-      clearInterval(interval);
-    }
+      circularProgress.style.transform = `rotate(${deg++}deg)`
   }, 
   speed) 
 }
@@ -29,9 +24,12 @@ progressValue.addEventListener('input', () => {
 
 switchAnimate.addEventListener('change', () => {
   if (switchAnimate.checked) {
-    currentProgressValue = 0
-    clearInterval(interval)
     animateCircle()
+  }
+  else {
+    clearInterval(interval)
+    circularProgress.style.transform = `rotate(0deg)`
+    deg = 0;
   }
 })
 

@@ -53,7 +53,7 @@ body {
   height: 140px;
   width: 140px;
   border-radius: 50%;
-  background: conic-gradient(#005cff 5deg, whitesmoke 0deg);
+  background: conic-gradient(#005cff 0deg, whitesmoke 0deg);
 }
 
 .circular-progress::before {
